@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "tsc proto-to-json.ts"
+    "build": "node init && tsc proto-to-json.ts"
   },
   "devDependencies": {
     "@types/node": "^11.11.4",
