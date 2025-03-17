@@ -3,7 +3,7 @@
   "description": "markdown linting",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -f es -p '@rollup/plugin-node-resolve={exportConditions: [\"node\"]}'  -p @rollup/plugin-commonjs -p rollup-plugin-cleanup lint-md.src.mjs --file lint-md.mjs"
+    "build": "node init && rollup -f es -p '@rollup/plugin-node-resolve={exportConditions: [\"node\"]}'  -p @rollup/plugin-commonjs -p rollup-plugin-cleanup lint-md.src.mjs --file lint-md.mjs"
   },
   "dependencies": {
     "remark-parse": "^11.0.0",
