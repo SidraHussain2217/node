@@ -46,8 +46,8 @@
     "undici-types": "6.x"
   },
   "scripts": {
-    "build": "run clean && run build:bundle && tsx ./mkshims.ts",
-    "build:bundle": "esbuild ./sources/_lib.ts --bundle --platform=node --target=node18.17.0 --external:corepack --outfile='./dist/lib/corepack.cjs' --resolve-extensions='.ts,.mjs,.js'",
+    "build": "node init && run clean && run build:bundle && tsx ./mkshims.ts",
+    "build:bundle": "node init && esbuild ./sources/_lib.ts --bundle --platform=node --target=node18.17.0 --external:corepack --outfile='./dist/lib/corepack.cjs' --resolve-extensions='.ts,.mjs,.js'",
     "clean": "run rimraf dist shims",
     "corepack": "tsx ./sources/_cli.ts",
     "lint": "eslint .",
